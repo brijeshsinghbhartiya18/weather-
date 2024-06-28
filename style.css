@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px;
+    background: black;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("img/bg1.jpg");
+    font-size: 120%;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.card {
+    background: rgba( 0, 0, 0, 0.32 );
+    box-shadow: 0 10px 30px 0 rgba(199, 234, 230, 0.37);
+    border: 1.2px solid rgba(199, 234, 230, 0.37);
+    color: white;
+    opacity: 0.8;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 2em;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 20px;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: auto;
+}
+
+button:hover {
+    background-color: rgb(102, 111, 120);
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: inherit;
+    font-size: 120%;
+    height: 25px;
+    width: calc(100% - 100px);
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+
+.Humidity {
+    margin-bottom: 1.5px;
+}
+
+.feels_like {
+    margin-bottom: 1.5px;
+}
+
+.flex {
+    display:flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    font-size: large;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Weather Loading....";
+    position:absolute;
+    top: 0em;
+}
+
+.swal-button {
+    padding: 10px 10px;
+}
+
+@media (max-width: 700px) {
+    .search {
+        justify-content: space-between;
+    }
+    input.search-bar {
+        width: calc(100% - 80px);
+    }
+}
